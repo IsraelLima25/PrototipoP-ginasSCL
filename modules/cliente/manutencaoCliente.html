@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SSC - Manutenção Cliente</title>
+    <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
+                alt="" loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li id="dpdwAtendimento" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAtendimento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-phone-square"></i>
+                        Atendimentos
+                    </a>
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwCliente">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCliente" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        Clientes
+                    </a>
+                    <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwLancamento">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Lançamentos
+                    </a>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwServico">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServico" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-concierge-bell"></i>
+                        Serviços
+                    </a>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+
+            <div class="container">
+                <h4 class="mt-4 color-font">Manutenção Cliente</h4>
+                <hr />
+                <div class="text-right">
+                    <span><i id="unlock" class="fas fa-unlock-alt tamanho-icone-padlock color-font-label"></i></span>
+                    <span><a href="../cliente/catalogoCliente.html"><i id="unlock" class="fas fa-backward tamanho-icone-padlock color-font-label"></i></a></span>
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="nome">Nome</label>
+                    <input type="text" disabled value="Israel Lima" class="form-control" id="nome">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="email">Email</label>
+                    <input type="email" disabled value="israel.dev.jv@gmail.com" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="telefone">Telefone</label>
+                    <input type="tel" disabled value="71983300545" class="form-control" id="telefone">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="cep">Cep</label>
+                    <input type="number" disabled value="41290221" class="form-control" id="cep">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="logradouro">Logradouro</label>
+                    <input type="text" disabled value="Primeira Travessa Ferreira" class="form-control" id="logradouro">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="numero">Numero</label>
+                    <input type="number" disabled value="5" class="form-control" id="numero">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
+                    <input type="text" disabled value="Em frente Unidade de Emergencia" class="form-control"
+                        id="ponto-referencia">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="complemento">Complemento</label>
+                    <input type="text" disabled value="Primeiro Andar" class="form-control" id="complemento">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="bairro">Bairro</label>
+                    <input type="text" disabled value="Pirajá" class="form-control" id="bairro">
+                </div>
+                <div class="text-center alinhamento">
+                    <button id="btn-confirmar-alteracao" data-toggle="modal" data-target="#modalConfirmarAlteracao"
+                        type="button" disabled class="btn btn-color-salon btn-block">Confirmar Alteração</button>
+                    <hr />
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalConfirmarAlteracao" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Cliente alterado com sucesso
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-color-salon">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../../bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../popper/popper.js"></script>
+    <script src="../../scripts/cliente/manutencaoCliente.js"></script>
+    <script src="../../scripts/navbar/navBar.js"></script>
+
+</body>
+
+</html>
