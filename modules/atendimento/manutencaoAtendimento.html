@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SSC - Manutenção Atendimento</title>
+    <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
+                alt="" loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li id="dpdwAtendimento" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAtendimento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-phone-square"></i>
+                        Atendimentos
+                    </a>
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwCliente">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCliente" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        Clientes
+                    </a>
+                    <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwLancamento">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Lançamentos
+                    </a>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwServico">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServico" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-concierge-bell"></i>
+                        Serviços
+                    </a>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <h4 class="mt-4 color-font">Manutenção Atendimento</h4>
+                <hr />
+                <div class="text-right">
+                    <span><i id="unlock" class="fas fa-unlock-alt tamanho-icone-padlock color-font-label"></i></span>
+                    <span><a href="../atendimento/catalogoAtendimento.html"><i id="unlock"
+                                class="fas fa-backward tamanho-icone-padlock color-font-label"></i></a></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="slcCliente">Selecionar Cliente</label>
+                    <select disabled class="form-control" id="slcCliente">
+                        <option>Bule de Cleonice</option>
+                        <option>Cabelo Lambido</option>
+                        <option>Penteado da Silva</option>
+                        <option>Sizenando Luiz</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="slcServico">Selecionar Serviço</label>
+                    <select disabled class="form-control" id="slcServico">
+                        <option>Sombracelha</option>
+                        <option>Corte de Cabelo</option>
+                        <option>Pintar Cabelo</option>
+                        <option>Escovar os dentes</option>
+                    </select>
+                    <button disabled id="btnCadastrar" type="button" class="btn btn-color-salon btn-sm mb-3">
+                        Adicionar a Cesta
+                    </button>
+                </div>
+
+                <table id="cesta-atendimento-table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cesta de Serviços</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="msg-cesta-vazia" hidden>
+                            <td>
+                                <p><i>Cesta vazia</i></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cumpadre Obardo</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalRemoverCesta">
+                                    <i class="fas fa-trash-alt"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cabelo lambido</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalRemoverCesta">
+                                    <i class="fas fa-trash-alt"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bule de Cleonice</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalRemoverCesta">
+                                    <i class="fas fa-trash-alt"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sizenando Duarte</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalRemoverCesta">
+                                    <i class="fas fa-trash-alt"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="valorTotal">Valor Total</label>
+                    <input disabled type="text" value="R$ 25,00" class="form-control" id="valorTotal">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="data">Data</label>
+                    <input disabled type="text" value="18/11/2020" class="form-control" id="data">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="hora">Hora</label>
+                    <input disabled type="time" value="11:30" class="form-control" id="hora">
+                </div>
+
+                <label class="color-font-label" for="data">Endereço</label>
+                <div class="form-check">
+                    <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCliente"
+                        value="option1">
+                    <label class="form-check-label" for="rbEnderecoCliente">
+                        Endereço Cliente
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbOutroEndereco"
+                        value="option2" checked>
+                    <label class="form-check-label" for="rbOutroEndereco">
+                        Outro Endereço
+                    </label>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="color-font-label" for="cep">Cep</label>
+                    <input disabled type="number" value="41290221" class="form-control" id="cep">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="logradouro">Logradouro</label>
+                    <input disabled type="text" value="Primeira Travessa Ferreira" class="form-control" id="logradouro">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="numero">Numero</label>
+                    <input disabled type="number" value="5" class="form-control" id="numero">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
+                    <input disabled type="text" value="Em frente unidade Emergencia" class="form-control"
+                        id="ponto-referencia">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="complemento">Complemento</label>
+                    <input disabled type="text" value="Primeiro Andar" class="form-control" id="complemento">
+                </div>
+                <div class="form-group">
+                    <label class="color-font-label" for="bairro">Bairro</label>
+                    <input disabled type="text" value="Pirajá" class="form-control" id="bairro">
+                </div>
+
+                <div class="text-center alinhamento">
+                    <button id="btn-confirmar-alteracao" style="margin-bottom: 16px;" data-toggle="modal"
+                        data-target="#modalConfirmarAlteracao" type="button" disabled
+                        class="btn btn-color-salon btn-block">Confirmar Alteração</button>
+                </div>
+
+                <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
+            </div>
+
+            <!-- Modal Confirmar Alteração -->
+            <div class="modal fade" id="modalConfirmarAlteracao" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Cliente alterado com sucesso!!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-color-salon">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Remover Atendimento da Cesta -->
+            <div class="modal fade" id="modalRemoverCesta" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Deseja realmente remover este serviço da cesta?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" style="width:80px;"
+                                class="btn btn-sm btn-color-salon">Sim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../../bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../popper/popper.js"></script>
+    <script src="../../scripts/navbar/navBar.js"></script>
+    <script src="../../scripts/atendimento/manutencaoAtendimento.js"></script>
+    <script src="../../scripts/util/global.js"></script>
+
+</body>
+
+</html>

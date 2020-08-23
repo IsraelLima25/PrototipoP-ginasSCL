@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>SSC - Cadastrar Cliente</title>
+    <title>SSC - Marcar Atendimento</title>
     <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -89,22 +89,112 @@
     <main>
         <section>
             <div class="container">
-                <h4 class="mt-4 color-font">Cadastrar Cliente</h4>
+                <h4 class="mt-4 color-font">Marcar Atendimento</h4>
                 <hr />
                 <div class="form-group">
-                    <label class="color-font-label" for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    <label for="exampleFormControlSelect1">Selecionar Cliente</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Bule de Cleonice</option>
+                        <option>Cabelo Lambido</option>
+                        <option>Penteado da Silva</option>
+                        <option>Sizenando Luiz</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label class="color-font-label" for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <label for="exampleFormControlSelect1">Selecionar Serviço</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Sombracelha</option>
+                        <option>Corte de Cabelo</option>
+                        <option>Pintar Cabelo</option>
+                        <option>Escovar os dentes</option>
+                    </select>
+                    <button id="btnCadastrar" type="button" class="btn btn-color-salon btn-sm mb-3">
+                        Adicionar a Cesta
+                    </button>
                 </div>
+
+                <table id="cesta-atendimento-table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cesta de Serviços</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="msg-cesta-vazia" hidden>
+                            <td>
+                                <p><i>Cesta vazia</i></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sombracelha</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalExluir">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corte Cabelo</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalExluir">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Escovar os Dentes</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalExluir">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick="redirect()">Catar Piolho</td>
+                            <td class="text-center">
+                                <a type="button" data-toggle="modal" data-target="#modalExluir">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <div class="form-group">
-                    <label class="color-font-label" for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone">
+                    <label class="color-font-label" for="valorTotal">Valor Total</label>
+                    <input type="number" class="form-control" id="valorTotal">
                 </div>
+
                 <div class="form-group">
+                    <label class="color-font-label" for="data">Data</label>
+                    <input type="date" class="form-control" id="data">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="hora">Hora</label>
+                    <input type="time" class="form-control" id="hora">
+                </div>
+
+                <label class="color-font-label" for="data">Endereço</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCliente"
+                        value="option1" checked>
+                    <label class="form-check-label" for="rbEnderecoCliente">
+                        Endereço Cliente
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="rbOutroEndereco"
+                        value="option2">
+                    <label class="form-check-label" for="rbOutroEndereco">
+                        Outro Endereço
+                    </label>
+                </div>
+
+                <div hidden id="outroEndereco">
+
+                <div class="form-group mt-3">
                     <label class="color-font-label" for="cep">Cep</label>
                     <input type="number" class="form-control" id="cep">
                 </div>
@@ -128,17 +218,19 @@
                     <label class="color-font-label" for="bairro">Bairro</label>
                     <input type="text" class="form-control" id="bairro">
                 </div>
+                </div>
+
                 <div class="text-center alinhamento">
                     <button id="btnCadastrar" style="margin-bottom: 16px;" data-toggle="modal"
-                        data-target="#modalConfirmarCadastro" type="button"
-                        class="btn btn-color-salon btn-block">Cadastrar</button>
+                        data-target="#modalConfirmarmarcacao" type="button"
+                        class="btn btn-color-salon btn-block">Marcar</button>
                 </div>
             </div>
 
             <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
 
             <!-- Modal -->
-            <div class="modal fade" id="modalConfirmarCadastro" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="modalConfirmarmarcacao" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -149,7 +241,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Cliente cadastrado com sucesso!!
+                            Atendimento marcado com sucesso!!
                         </div>
                         <div class="modal-footer">
                         </div>
@@ -163,6 +255,7 @@
     <script src="../../popper/popper.js"></script>
     <script src="../../scripts/navbar/navBar.js"></script>
     <script src="../../scripts/util/global.js"></script>
+    <script src="../../scripts/atendimento/marcarAtendimento.js"></script>
 </body>
 
 </html>
