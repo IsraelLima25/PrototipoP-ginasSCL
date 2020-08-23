@@ -181,95 +181,97 @@
                 <label class="color-font-label" for="data">Endereço</label>
                 <div class="form-check">
                     <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCliente"
-                        value="option1">
+                        value="option1" checked>
                     <label class="form-check-label" for="rbEnderecoCliente">
                         Endereço Cliente
                     </label>
                 </div>
                 <div class="form-check">
                     <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbOutroEndereco"
-                        value="option2" checked>
+                        value="option2">
                     <label class="form-check-label" for="rbOutroEndereco">
                         Outro Endereço
                     </label>
                 </div>
-                <div class="form-group mt-3">
-                    <label class="color-font-label" for="cep">Cep</label>
-                    <input disabled type="number" value="41290221" class="form-control" id="cep">
+                <div hidden id="outroEndereco">
+                    <div class="form-group mt-3">
+                        <label class="color-font-label" for="cep">Cep</label>
+                        <input disabled type="number" value="41290221" class="form-control" id="cep">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="logradouro">Logradouro</label>
+                        <input disabled type="text" value="Primeira Travessa Ferreira" class="form-control"
+                            id="logradouro">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="numero">Numero</label>
+                        <input disabled type="number" value="5" class="form-control" id="numero">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
+                        <input disabled type="text" value="Em frente unidade Emergencia" class="form-control"
+                            id="ponto-referencia">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="complemento">Complemento</label>
+                        <input disabled type="text" value="Primeiro Andar" class="form-control" id="complemento">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="bairro">Bairro</label>
+                        <input disabled type="text" value="Pirajá" class="form-control" id="bairro">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="logradouro">Logradouro</label>
-                    <input disabled type="text" value="Primeira Travessa Ferreira" class="form-control" id="logradouro">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="numero">Numero</label>
-                    <input disabled type="number" value="5" class="form-control" id="numero">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
-                    <input disabled type="text" value="Em frente unidade Emergencia" class="form-control"
-                        id="ponto-referencia">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="complemento">Complemento</label>
-                    <input disabled type="text" value="Primeiro Andar" class="form-control" id="complemento">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="bairro">Bairro</label>
-                    <input disabled type="text" value="Pirajá" class="form-control" id="bairro">
-                </div>
-
                 <div class="text-center alinhamento">
                     <button id="btn-confirmar-alteracao" style="margin-bottom: 16px;" data-toggle="modal"
                         data-target="#modalConfirmarAlteracao" type="button" disabled
                         class="btn btn-color-salon btn-block">Confirmar Alteração</button>
                 </div>
-
                 <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
-            </div>
 
-            <!-- Modal Confirmar Alteração -->
-            <div class="modal fade" id="modalConfirmarAlteracao" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Cliente alterado com sucesso!!
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-color-salon">Excluir</button>
+                <!-- Modal Confirmar Alteração -->
+                <div class="modal fade" id="modalConfirmarAlteracao" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../../img/logomarca-removebg-preview.png" width="50" height="50"
+                                    alt="logomarca">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Cliente alterado com sucesso!!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-color-salon">Excluir</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Modal Remover Atendimento da Cesta -->
-            <div class="modal fade" id="modalRemoverCesta" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Deseja realmente remover este serviço da cesta?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" style="width:80px;"
-                                class="btn btn-sm btn-color-salon">Sim</button>
+                <!-- Modal Remover Atendimento da Cesta -->
+                <div class="modal fade" id="modalRemoverCesta" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../../img/logomarca-removebg-preview.png" width="50" height="50"
+                                    alt="logomarca">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Deseja realmente remover este serviço da cesta?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" style="width:80px;"
+                                    class="btn btn-sm btn-color-salon">Sim</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
     <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
