@@ -96,7 +96,14 @@
                     <span><a href="../atendimento/catalogoAtendimento.html"><i id="unlock"
                                 class="fas fa-backward tamanho-icone-padlock color-font-label"></i></a></span>
                 </div>
-
+                <div class="form-group">
+                    <label for="status">Codigo Atendimento</label>
+                    <p>1520</p>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <p>PENDENTE</p>
+                </div>
                 <div class="form-group">
                     <label for="slcCliente">Selecionar Cliente</label>
                     <select disabled class="form-control" id="slcCliente">
@@ -169,6 +176,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="color-font-label" for="desconto">Desconto</label>
+                    <input type="number" class="form-control" id="desconto">
+                </div>
+
+                <div class="form-group">
                     <label class="color-font-label" for="data">Data</label>
                     <input disabled type="text" value="18/11/2020" class="form-control" id="data">
                 </div>
@@ -178,7 +190,39 @@
                     <input disabled type="time" value="11:30" class="form-control" id="hora">
                 </div>
 
+                <div class="form-group">
+                    <label for="slcFormaPagamento">Forma de Pagamento</label>
+                    <select disabled class="form-control" id="slcFormaPagamento">
+                        <option selected value="cart">Carteira</option>
+                        <option value="cred">Crédito</option>
+                        <option value="deb" class="pagamento">Débito</option>
+                    </select>
+                </div>
+
+                <div hidden id="groupBandeiras" class="form-group">
+                    <label for="slcBandeira">Bandeira Cartão</label>
+                    <select disabled class="form-control" id="slcBandeira">
+                        <option>Elo</option>
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                    </select>
+                </div>
+
+                <div hidden id="groupQuantidadeParcelas" class="form-group">
+                    <label class="color-font-label" for="quantidadeParcelas">Quantidade Parcelas</label>
+                    <input disabled type="number" class="form-control" id="quantidadeParcelas">
+                </div>
+
                 <label class="color-font-label" for="data">Endereço</label>
+
+                <div class="form-check">
+                    <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCasa"
+                        value="option1">
+                    <label class="form-check-label" for="rbEnderecoCasa">
+                        Casa
+                    </label>
+                </div>
+
                 <div class="form-check">
                     <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCliente"
                         value="option1" checked>
@@ -186,6 +230,7 @@
                         Endereço Cliente
                     </label>
                 </div>
+
                 <div class="form-check">
                     <input disabled class="form-check-input" type="radio" name="exampleRadios" id="rbOutroEndereco"
                         value="option2">
@@ -226,6 +271,11 @@
                         data-target="#modalConfirmarAlteracao" type="button" disabled
                         class="btn btn-color-salon btn-block">Confirmar Alteração</button>
                 </div>
+                <div class="text-center alinhamento">
+                    <button id="btn-confirmar-lancamento" style="margin-bottom: 16px;" data-toggle="modal"
+                        data-target="#modalConfirmarPagamento" type="button"
+                        class="btn btn-color-salon btn-block">Lançar Pagamento</button>
+                </div>
                 <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
 
                 <!-- Modal Confirmar Alteração -->
@@ -264,6 +314,29 @@
                             </div>
                             <div class="modal-body">
                                 Deseja realmente remover este serviço da cesta?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" style="width:80px;"
+                                    class="btn btn-sm btn-color-salon">Sim</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Remover Atendimento da Cesta -->
+                <div class="modal fade" id="modalConfirmarPagamento" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../../img/logomarca-removebg-preview.png" width="50" height="50"
+                                    alt="logomarca">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Deseja realmente lançar este pagamento?
                             </div>
                             <div class="modal-footer">
                                 <button type="button" data-dismiss="modal" style="width:80px;"

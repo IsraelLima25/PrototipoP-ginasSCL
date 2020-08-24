@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SSC - Detalhe Lançamento</title>
+    <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
+                alt="" loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li id="dpdwAtendimento" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAtendimento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-phone-square"></i>
+                        Atendimentos
+                    </a>
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwCliente">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCliente" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        Clientes
+                    </a>
+                    <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwLancamento">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Lançamentos
+                    </a>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwServico">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServico" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-concierge-bell"></i>
+                        Serviços
+                    </a>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <h4 class="mt-4 color-font">Detalhe Lançamento</h4>
+                <hr />
+ 
+                <div class="form-group">
+                    <label for="status">Codigo Lançamento</label>
+                    <p>1599</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Codigo Atendimento</label>
+                    <p>1599</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="dataLancamento">Data Lançamento</label>
+                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataLancamento">
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Pagador</label>
+                    <p>Israel Santos Lima Filho</p>
+                </div>
+
+                <table id="cesta-atendimento-table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cesta de Serviços</th>
+                            <th scope="col">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="msg-cesta-vazia" hidden>
+                            <td>
+                                <p><i>Cesta vazia</i></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sombracelha</td> 
+                            <td>25,00</td>                         
+                        
+                        </tr>                    
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="dataAtendimento">Data Atendimento</label>
+                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataAtendimento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="horaAtendimento">Hora Atendimento</label>
+                    <input disabled type="time" value="11:00" class="form-control" id="horaAtendimento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="bairroAtendimento">Bairro Atendimento</label>
+                    <input disabled type="text" value="Fazenda Coutos" class="form-control" id="bairroAtendimento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="logradouroAtendimento">Logradouro Atendimento</label>
+                    <input disabled type="text" value="Rua das Rosas" class="form-control" id="logradouroAtendimento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="formaPagamento">Forma Pagamento</label>
+                    <input disabled type="text" value="Carteira" class="form-control" id="formaPagamento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="valorAtendimento">Valor Atendimento</label>
+                    <input disabled type="text" value="300,00" class="form-control" id="valorAtendimento">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="desconto">Desconto</label>
+                    <input disabled type="text" value="100,00" class="form-control" id="desconto">
+                </div>
+
+                <div class="form-group">
+                    <label class="color-font-label" for="valorTotalLancamento">Valor Total Lançamento</label>
+                    <input disabled type="text" value="200,00" class="form-control" id="valorTotalLancamento">
+                </div>
+
+            </div>
+
+            <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
+
+        </section>
+    </main>
+    <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../../bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../popper/popper.js"></script>
+    <script src="../../scripts/navbar/navBar.js"></script>
+    <script src="../../scripts/util/global.js"></script>
+    <script src="../../scripts/lancamento/estornarLancamento.js"></script>
+</body>
+
+</html>

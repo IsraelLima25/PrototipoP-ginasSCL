@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SSC - Relatório Lançamento</title>
+    <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
+                alt="" loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li id="dpdwAtendimento" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAtendimento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-phone-square"></i>
+                        Atendimentos
+                    </a>
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwCliente">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCliente" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        Clientes
+                    </a>
+                    <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwLancamento">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Lançamentos
+                    </a>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
+                            Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dpdwServico">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServico" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-concierge-bell"></i>
+                        Serviços
+                    </a>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Develoment</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <h4 class="mt-4 color-font">Relatório Lançamento</h4>
+                <hr />
+
+                <div id="groupFilterByData">
+                    <div class="form-group">
+                        <label class="color-font-label" for="data-inicio">Data Ínicio</label>
+                        <input type="text" value="01/11/2020" class="form-control" id="data-inicio">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="data-fim">Data Fim</label>
+                        <input type="text" value="31/12/2020" class="form-control" id="data-fim">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 100px; margin-top: 20px;">
+                    <div class="mt-5">
+                    <table id="lancamento-table" class="table">
+                        <thead class="text-center">
+                            <tr>
+                                <th scope="col">Serviço</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Valor</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="msg-nenhum-registro-encontrado" hidden>
+                                <td>
+                                    <p><i>Nenhum cliente encontrado</i></p>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Sombracelha</td>
+                                <td class="text-center">
+                                    15/11/2020
+                                </td>
+
+                                <td class="text-center">
+                                    25,00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Escova Cabelo</td>
+                                <td class="text-center">
+                                    15/12/2020
+                                </td>
+
+                                <td class="text-center">
+                                    50,00
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                    </div>
+                    <p class="text-center mt-5"><i>Valor Total Período: <b><span style="color: green;">R$
+                                    75,00</span></b></i></p>
+                </div>
+
+                <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
+
+                <!-- Modal-->
+                <div class="modal fade" id="modalEstornar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../../img/logomarca-removebg-preview.png" width="50" height="50"
+                                    alt="logomarca">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Deseja realmente estornar este lançamento?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" style="width:80px;"
+                                    class="btn btn-sm btn-color-salon">Sim</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../../bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../popper/popper.js"></script>
+    <script src="../../scripts/navbar/navBar.js"></script>
+    <script src="../../scripts/util/global.js"></script>
+    <script src="../../scripts/lancamento/estornarLancamento.js"></script>
+    <script src="../../scripts/util/filter-table.js"></script>
+</body>
+
+</html>

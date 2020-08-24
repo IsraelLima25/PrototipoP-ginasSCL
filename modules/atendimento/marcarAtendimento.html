@@ -167,6 +167,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="color-font-label" for="desconto">Desconto</label>
+                    <input type="number" class="form-control" id="desconto">
+                </div>
+
+                <div class="form-group">
                     <label class="color-font-label" for="data">Data</label>
                     <input type="date" class="form-control" id="data">
                 </div>
@@ -176,7 +181,38 @@
                     <input type="time" class="form-control" id="hora">
                 </div>
 
+                <div class="form-group">
+                    <label for="slcFormaPagamento">Forma de Pagamento</label>
+                    <select class="form-control" id="slcFormaPagamento">
+                        <option selected value="cart">Carteira</option>
+                        <option value="cred">Crédito</option>
+                        <option value="deb" class="pagamento">Débito</option>
+                    </select>
+                </div>
+
+                <div hidden id="groupBandeiras" class="form-group">
+                    <label for="slcBandeira">Bandeira Cartão</label>
+                    <select class="form-control" id="slcBandeira">
+                        <option>Elo</option>
+                        <option>Mastercard</option>
+                        <option>Visa</option>
+                    </select>
+                </div>
+
+                <div hidden id="groupQuantidadeParcelas" class="form-group">
+                    <label class="color-font-label" for="quantidadeParcelas">Quantidade Parcelas</label>
+                    <input type="number" class="form-control" id="quantidadeParcelas">
+                </div>
+
                 <label class="color-font-label" for="data">Endereço</label>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCasa"
+                        value="option1">
+                    <label class="form-check-label" for="rbEnderecoCasa">
+                        Casa
+                    </label>
+                </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="rbEnderecoCliente"
                         value="option1" checked>
@@ -194,30 +230,30 @@
 
                 <div hidden id="outroEndereco">
 
-                <div class="form-group mt-3">
-                    <label class="color-font-label" for="cep">Cep</label>
-                    <input type="number" class="form-control" id="cep">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="logradouro">Logradouro</label>
-                    <input type="text" class="form-control" id="logradouro">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="numero">Numero</label>
-                    <input type="number" class="form-control" id="numero">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
-                    <input type="text" class="form-control" id="ponto-referencia">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="complemento">Complemento</label>
-                    <input type="text" class="form-control" id="complemento">
-                </div>
-                <div class="form-group">
-                    <label class="color-font-label" for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro">
-                </div>
+                    <div class="form-group mt-3">
+                        <label class="color-font-label" for="cep">Cep</label>
+                        <input type="number" class="form-control" id="cep">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="logradouro">Logradouro</label>
+                        <input type="text" class="form-control" id="logradouro">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="numero">Numero</label>
+                        <input type="number" class="form-control" id="numero">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="ponto-referencia">Ponto Referência</label>
+                        <input type="text" class="form-control" id="ponto-referencia">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento">
+                    </div>
+                    <div class="form-group">
+                        <label class="color-font-label" for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro">
+                    </div>
                 </div>
 
                 <div class="text-center alinhamento">
