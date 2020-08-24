@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>SSC - Detalhe Lançamento</title>
+    <title>SSC - Cadastrar Serviço</title>
     <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -106,99 +106,47 @@
     <main>
         <section>
             <div class="container">
-                <h4 class="mt-4 color-font">Detalhe Lançamento</h4>
+                <h4 class="mt-4 color-font">Cadastrar Serviço</h4>
                 <hr />
 
-                <div class="text-right">
-                    <span><a href="../lancamento/estornarLancamento.html"><i id="unlock"
-                                class="fas fa-backward tamanho-icone-padlock color-font-label"></i></a></span>
+                <div class="form-group">
+                    <label class="color-font-label" for="descricao">Descricao</label>
+                    <input type="text" class="form-control" id="descricao">
                 </div>
 
                 <div class="form-group">
-                    <label for="status">Codigo Lançamento</label>
-                    <p>1599</p>
+                    <label class="color-font-label" for="preco">Preço</label>
+                    <input type="text" class="form-control" id="preco">
                 </div>
 
-                <div class="form-group">
-                    <label for="status">Codigo Atendimento</label>
-                    <p>1599</p>
+                <div class="text-center alinhamento">
+                    <button id="btnCadastrar" style="margin-bottom: 16px;" data-toggle="modal"
+                        data-target="#modalConfirmarmarcacao" type="button"
+                        class="btn btn-color-salon btn-block">Cadastrar</button>
                 </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="dataLancamento">Data Lançamento</label>
-                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataLancamento">
-                </div>
-
-                <div class="form-group">
-                    <label for="status">Pagador</label>
-                    <p>Israel Santos Lima Filho</p>
-                </div>
-
-                <table id="cesta-atendimento-table" class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Cesta de Serviços</th>
-                            <th scope="col">Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="msg-cesta-vazia" hidden>
-                            <td>
-                                <p><i>Cesta vazia</i></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sombracelha</td>
-                            <td>25,00</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="dataAtendimento">Data Atendimento</label>
-                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="horaAtendimento">Hora Atendimento</label>
-                    <input disabled type="time" value="11:00" class="form-control" id="horaAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="bairroAtendimento">Bairro Atendimento</label>
-                    <input disabled type="text" value="Fazenda Coutos" class="form-control" id="bairroAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="logradouroAtendimento">Logradouro Atendimento</label>
-                    <input disabled type="text" value="Rua das Rosas" class="form-control" id="logradouroAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="formaPagamento">Forma Pagamento</label>
-                    <input disabled type="text" value="Carteira" class="form-control" id="formaPagamento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="valorAtendimento">Valor Atendimento</label>
-                    <input disabled type="text" value="300,00" class="form-control" id="valorAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="desconto">Desconto</label>
-                    <input disabled type="text" value="100,00" class="form-control" id="desconto">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="valorTotalLancamento">Valor Total Lançamento</label>
-                    <input disabled type="text" value="200,00" class="form-control" id="valorTotalLancamento">
-                </div>
-
             </div>
 
             <div class="back-to-top" href="#"><i class="fas fa-chevron-up"></i></div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="modalConfirmarmarcacao" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../../img/logomarca-removebg-preview.png" width="50" height="50" alt="logomarca">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Serviço cadastrado com sucesso!!
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
@@ -206,7 +154,7 @@
     <script src="../../popper/popper.js"></script>
     <script src="../../scripts/navbar/navBar.js"></script>
     <script src="../../scripts/util/global.js"></script>
-    <script src="../../scripts/lancamento/estornarLancamento.js"></script>
+    <script src="../../scripts/atendimento/marcarAtendimento.js"></script>
 </body>
 
 </html>

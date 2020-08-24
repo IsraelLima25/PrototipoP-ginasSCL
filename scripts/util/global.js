@@ -7,7 +7,11 @@ $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if (scroll === 0) {
         $('.back-to-top').css("display", "none");
-    }else{
+    } else {
         $('.back-to-top').css("display", "block");
     }
 });
+
+$('section').click(function () {
+    $('.navbar-collapse').collapse('hide');
+})

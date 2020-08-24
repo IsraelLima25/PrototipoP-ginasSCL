@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../home/home.html">
             <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
                 alt="" loading="lazy">
         </a>
@@ -32,8 +32,15 @@
                         Atendimentos
                     </a>
                     <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
-                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
-                            Develoment</a>
+                        <a class="dropdown-item" href="../atendimento/catalogoAtendimento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Catálogo</a>
+                    </div>
+
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="../atendimento/marcarAtendimento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Marcar</a>
                     </div>
                 </li>
 
@@ -44,9 +51,9 @@
                         Clientes
                     </a>
                     <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
-                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                        <a class="dropdown-item" href="../cliente/cadastrarCliente.html"><i style="font-size: 10px;"
                                 class="fas fa-play"></i> Cadastro</a>
-                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                        <a class="dropdown-item" href="../cliente/catalogoCliente.html"><i style="font-size: 10px;"
                                 class="fas fa-play"></i> Catálogo</a>
                     </div>
                 </li>
@@ -55,11 +62,17 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-hand-holding-usd"></i>
-                        Lançamentos
+                        Lançamento
                     </a>
                     <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
-                        <a class="dropdown-item" href="#"><i style="font-size: 10px;"
-                                class="fas fa-play"></i> Develoment</a>
+                        <a class="dropdown-item" href="../lancamento/estornarLancamento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Estornar</a>
+                    </div>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="../lancamento/relatorioLancamento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Relatório</a>
                     </div>
                 </li>
 
@@ -70,17 +83,21 @@
                         Serviços
                     </a>
                     <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
-                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
-                                class="fas fa-play"></i> Develoment</a>
+                        <a class="dropdown-item" href="../servico/cadastrarServico.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                    </div>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="../servico/catalogoServico.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
-                        <i class="fas fa-sign-out-alt"></i>
-                        Sair
-                    </a>
-                </li>
+
+                <a class="nav-link" href="../signin/login.html" aria-expanded="false">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Sair
+                </a>
+
 
             </ul>
         </div>
@@ -145,7 +162,6 @@
                     </tbody>
                 </table>
             </div>
-
             <!-- Modal -->
             <div class="modal fade" id="modalExluir" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -161,7 +177,8 @@
                             Deseja realmente excluir este cliente?
                         </div>
                         <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-color-salon">Sim</button>
+                            <button type="button" data-dismiss="modal" style="width: 100px;"
+                                class="btn btn-color-salon">Sim</button>
                         </div>
                     </div>
                 </div>
@@ -174,8 +191,7 @@
     <script src="../../scripts/cliente/catalogoCliente.js"></script>
     <script src="../../scripts/util/filter-table.js"></script>
     <script src="../../scripts/navbar/navBar.js"></script>
-
-
+    <script src="../../scripts/util/global.js"></script>
 </body>
 
 </html>

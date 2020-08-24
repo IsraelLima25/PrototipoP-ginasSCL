@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../home/home.html">
             <img src="../../img/logomarca-removebg-preview.png" width="48" height="48" class="d-inline-block align-top"
                 alt="" loading="lazy">
         </a>
@@ -32,8 +32,15 @@
                         Atendimentos
                     </a>
                     <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
-                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
-                            Develoment</a>
+                        <a class="dropdown-item" href="../atendimento/catalogoAtendimento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Catálogo</a>
+                    </div>
+
+                    <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
+                        <a class="dropdown-item" href="../atendimento/marcarAtendimento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Marcar</a>
                     </div>
                 </li>
 
@@ -44,9 +51,9 @@
                         Clientes
                     </a>
                     <div id="divCliente" class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
-                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
+                        <a class="dropdown-item" href="../cliente/cadastrarCliente.html"><i style="font-size: 10px;"
                                 class="fas fa-play"></i> Cadastro</a>
-                        <a class="dropdown-item" href="./catalogoCliente.html"><i style="font-size: 10px;"
+                        <a class="dropdown-item" href="../cliente/catalogoCliente.html"><i style="font-size: 10px;"
                                 class="fas fa-play"></i> Catálogo</a>
                     </div>
                 </li>
@@ -55,11 +62,17 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLancamento" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-hand-holding-usd"></i>
-                        Lançamentos
+                        Lançamento
                     </a>
                     <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
-                        <a class="dropdown-item" href="#"><i style="font-size: 10px;" class="fas fa-play"></i>
-                            Develoment</a>
+                        <a class="dropdown-item" href="../lancamento/estornarLancamento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Estornar</a>
+                    </div>
+                    <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
+                        <a class="dropdown-item" href="../lancamento/relatorioLancamento.html"><i
+                                style="font-size: 10px;" class="fas fa-play"></i>
+                            Relatório</a>
                     </div>
                 </li>
 
@@ -70,17 +83,21 @@
                         Serviços
                     </a>
                     <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
-                        <a class="dropdown-item" href="./cadastrarCliente.html"><i style="font-size: 10px;"
-                                class="fas fa-play"></i> Develoment</a>
+                        <a class="dropdown-item" href="../servico/cadastrarServico.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Cadastro</a>
+                    </div>
+                    <div id="divServico" class="dropdown-menu" aria-labelledby="navbarDropdownServico">
+                        <a class="dropdown-item" href="../servico/catalogoServico.html"><i style="font-size: 10px;"
+                                class="fas fa-play"></i> Catálogo</a>
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" role="link" aria-expanded="false">
-                        <i class="fas fa-sign-out-alt"></i>
-                        Sair
-                    </a>
-                </li>
+
+                <a class="nav-link" href="../signin/login.html" aria-expanded="false">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Sair
+                </a>
+
 
             </ul>
         </div>
@@ -101,51 +118,54 @@
                         <label class="color-font-label" for="data-fim">Data Fim</label>
                         <input type="text" value="31/12/2020" class="form-control" id="data-fim">
                     </div>
+                    <button id="btnCadastrar" style="margin-bottom: 16px; width:120px;" data-toggle="modal"
+                        data-target="#modalConfirmarmarcacao" type="button" class="btn btn-color-salon btn-block"><i
+                            class="fas fa-sync-alt"></i> Atualizar</button>
                 </div>
 
                 <div style="margin-bottom: 100px; margin-top: 20px;">
                     <div class="mt-5">
-                    <table id="lancamento-table" class="table">
-                        <thead class="text-center">
-                            <tr>
-                                <th scope="col">Serviço</th>
-                                <th scope="col">Data</th>
-                                <th scope="col">Valor</th>
+                        <table id="lancamento-table" class="table">
+                            <thead class="text-center">
+                                <tr>
+                                    <th scope="col">Serviço</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Valor</th>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="msg-nenhum-registro-encontrado" hidden>
-                                <td>
-                                    <p><i>Nenhum cliente encontrado</i></p>
-                                </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="msg-nenhum-registro-encontrado" hidden>
+                                    <td>
+                                        <p><i>Nenhum cliente encontrado</i></p>
+                                    </td>
 
-                            </tr>
-                            <tr>
-                                <td>Sombracelha</td>
-                                <td class="text-center">
-                                    15/11/2020
-                                </td>
+                                </tr>
+                                <tr>
+                                    <td>Sombracelha</td>
+                                    <td class="text-center">
+                                        15/11/2020
+                                    </td>
 
-                                <td class="text-center">
-                                    25,00
-                                </td>
-                            </tr>
+                                    <td class="text-center">
+                                        25,00
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>Escova Cabelo</td>
-                                <td class="text-center">
-                                    15/12/2020
-                                </td>
+                                <tr>
+                                    <td>Escova Cabelo</td>
+                                    <td class="text-center">
+                                        15/12/2020
+                                    </td>
 
-                                <td class="text-center">
-                                    50,00
-                                </td>
-                            </tr>
+                                    <td class="text-center">
+                                        50,00
+                                    </td>
+                                </tr>
 
-                        </tbody>
+                            </tbody>
 
-                    </table>
+                        </table>
                     </div>
                     <p class="text-center mt-5"><i>Valor Total Período: <b><span style="color: green;">R$
                                     75,00</span></b></i></p>

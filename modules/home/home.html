@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>SSC - Detalhe Lançamento</title>
+    <title>SSC - Home</title>
     <link rel="stylesheet" href="../../bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,14 +32,12 @@
                         Atendimentos
                     </a>
                     <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
-                        <a class="dropdown-item" href="../atendimento/catalogoAtendimento.html"><i
-                                style="font-size: 10px;" class="fas fa-play"></i>
+                        <a class="dropdown-item" href="../atendimento/catalogoAtendimento.html"><i style="font-size: 10px;" class="fas fa-play"></i>
                             Catálogo</a>
                     </div>
 
                     <div id="divAtendimento" class="dropdown-menu" aria-labelledby="navbarDropdownAtendimento">
-                        <a class="dropdown-item" href="../atendimento/marcarAtendimento.html"><i
-                                style="font-size: 10px;" class="fas fa-play"></i>
+                        <a class="dropdown-item" href="../atendimento/marcarAtendimento.html"><i style="font-size: 10px;" class="fas fa-play"></i>
                             Marcar</a>
                     </div>
                 </li>
@@ -65,13 +63,11 @@
                         Lançamento
                     </a>
                     <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
-                        <a class="dropdown-item" href="../lancamento/estornarLancamento.html"><i
-                                style="font-size: 10px;" class="fas fa-play"></i>
+                        <a class="dropdown-item" href="../lancamento/estornarLancamento.html"><i style="font-size: 10px;" class="fas fa-play"></i>
                             Estornar</a>
                     </div>
                     <div id="divLancamento" class="dropdown-menu" aria-labelledby="navbarDropdownLancamento">
-                        <a class="dropdown-item" href="../lancamento/relatorioLancamento.html"><i
-                                style="font-size: 10px;" class="fas fa-play"></i>
+                        <a class="dropdown-item" href="../lancamento/relatorioLancamento.html"><i style="font-size: 10px;" class="fas fa-play"></i>
                             Relatório</a>
                     </div>
                 </li>
@@ -92,12 +88,12 @@
                     </div>
                 </li>
 
-
-                <a class="nav-link" href="../signin/login.html" aria-expanded="false">
-                    <i class="fas fa-sign-out-alt"></i>
-                    Sair
-                </a>
-
+               
+                    <a class="nav-link" href="../signin/login.html" aria-expanded="false">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </a>
+             
 
             </ul>
         </div>
@@ -105,94 +101,79 @@
 
     <main>
         <section>
-            <div class="container">
-                <h4 class="mt-4 color-font">Detalhe Lançamento</h4>
+
+
+            <div class="container mt-3">
+                <div class="pb-4">
+                    <h4 class="text-center"><i class="fas fa-clock"></i> Hoje 23 Agosto 2020</h4>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="color-font-label" for="cep">Outra Data</label>
+                    <input type="date" class="form-control" id="cep">
+                </div>
+                <div class="text-center alinhamento">
+                    <button id="btnCadastrar" style="margin-bottom: 16px; width:120px;" data-toggle="modal"
+                        data-target="#modalConfirmarmarcacao" type="button" class="btn btn-color-salon btn-block"><i
+                            class="fas fa-sync-alt"></i> Atualizar</button>
+                </div>
+
+
+
+                <h3 class="color-font mt-4">Ticket's</h3>
                 <hr />
 
-                <div class="text-right">
-                    <span><a href="../lancamento/estornarLancamento.html"><i id="unlock"
-                                class="fas fa-backward tamanho-icone-padlock color-font-label"></i></a></span>
+                <div class="card bg-light mt-4 mb-3" style="align-content: center;" style="max-width: 18rem;">
+                    <div class="card-header">Israel Santos Lima Filho</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <b>Serviço</b>: Corte Cabelo
+                            </li>
+                            <li>
+                                <b>Bairro</b>: Pirajá
+                            </li>
+
+                            <li>
+                                <b>Endereço</b>: Rua Lampião
+                            </li>
+
+                            <li>
+                                <b>Hora</b>: 15:30
+                            </li>
+                        </ul>
+
+                        <button id="btnCadastrar" style="margin-bottom: 16px; width:120px;" data-toggle="modal"
+                            data-target="#modalConfirmarmarcacao" type="button"
+                            class="btn btn-color-salon btn-block">Detalhes</button>
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="status">Codigo Lançamento</label>
-                    <p>1599</p>
-                </div>
+                <div class="card bg-light mt-4 mb-3" style="align-content: center;" style="max-width: 18rem;">
+                    <div class="card-header">Israel Santos Lima Filho</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <b>Serviço</b>: Corte Cabelo
+                            </li>
+                            <li>
+                                <b>Bairro</b>: Pirajá
+                            </li>
 
-                <div class="form-group">
-                    <label for="status">Codigo Atendimento</label>
-                    <p>1599</p>
-                </div>
+                            <li>
+                                <b>Endereço</b>: Rua Lampião
+                            </li>
 
-                <div class="form-group">
-                    <label class="color-font-label" for="dataLancamento">Data Lançamento</label>
-                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataLancamento">
-                </div>
+                            <li>
+                                <b>Hora</b>: 15:30
+                            </li>
+                        </ul>
 
-                <div class="form-group">
-                    <label for="status">Pagador</label>
-                    <p>Israel Santos Lima Filho</p>
-                </div>
+                        <button id="btnCadastrar" style="margin-bottom: 16px; width:120px;" data-toggle="modal"
+                            data-target="#modalConfirmarmarcacao" type="button"
+                            class="btn btn-color-salon btn-block">Detalhes</button>
+                    </div>
 
-                <table id="cesta-atendimento-table" class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Cesta de Serviços</th>
-                            <th scope="col">Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="msg-cesta-vazia" hidden>
-                            <td>
-                                <p><i>Cesta vazia</i></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sombracelha</td>
-                            <td>25,00</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="dataAtendimento">Data Atendimento</label>
-                    <input disabled type="text" value="18/11/2020" class="form-control" id="dataAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="horaAtendimento">Hora Atendimento</label>
-                    <input disabled type="time" value="11:00" class="form-control" id="horaAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="bairroAtendimento">Bairro Atendimento</label>
-                    <input disabled type="text" value="Fazenda Coutos" class="form-control" id="bairroAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="logradouroAtendimento">Logradouro Atendimento</label>
-                    <input disabled type="text" value="Rua das Rosas" class="form-control" id="logradouroAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="formaPagamento">Forma Pagamento</label>
-                    <input disabled type="text" value="Carteira" class="form-control" id="formaPagamento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="valorAtendimento">Valor Atendimento</label>
-                    <input disabled type="text" value="300,00" class="form-control" id="valorAtendimento">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="desconto">Desconto</label>
-                    <input disabled type="text" value="100,00" class="form-control" id="desconto">
-                </div>
-
-                <div class="form-group">
-                    <label class="color-font-label" for="valorTotalLancamento">Valor Total Lançamento</label>
-                    <input disabled type="text" value="200,00" class="form-control" id="valorTotalLancamento">
                 </div>
 
             </div>
@@ -204,9 +185,8 @@
     <script src="../../jquery-3.5.1/jquery-3.5.1.js"></script>
     <script src="../../bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
     <script src="../../popper/popper.js"></script>
-    <script src="../../scripts/navbar/navBar.js"></script>
     <script src="../../scripts/util/global.js"></script>
-    <script src="../../scripts/lancamento/estornarLancamento.js"></script>
+    <script src="../../scripts/navbar/navBar.js"></script>
 </body>
 
 </html>
